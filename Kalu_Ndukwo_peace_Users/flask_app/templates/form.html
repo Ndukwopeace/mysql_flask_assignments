@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/bootstrap.css')}}">
+
+    <title>Add User</title>
+</head>
+<body>
+    {%extends 'base.html'%}
+
+    {%block content%}
+    <form action="/add" method="post" class="container p-5 mt-5 d-flex flex-column border border-tertiary" style="width: 50rem; margin-top: 5rem">
+        <div class="row mb-3">
+            <label for="First_name" class="col-sm-2 col-form-label">First name :</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="first_name">
+            </div>
+          </div>
+        <div class="row mb-3">
+            <label for="last_name" class="col-sm-2 col-form-label">Last name :</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="last_name">
+            </div>
+        </div>
+        
+
+        <div class="row mb-3">
+          <label for="email" class="col-sm-2 col-form-label">Email :</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="email">
+          </div>
+        </div>
+      
+        <button type="submit" class="btn btn-primary align-self-end">Add user</button>
+      </form>
+      {%endblock%}
+</body>
+</html>
